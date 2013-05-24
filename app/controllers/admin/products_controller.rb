@@ -81,4 +81,8 @@ class Admin::ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def short_description
+     description.truncate(40)
+  end
 end
